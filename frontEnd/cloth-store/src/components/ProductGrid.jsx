@@ -12,8 +12,8 @@ export default function ProductGrid({ title, category }) {
       try {
         setLoading(true)
         const url = category 
-          ? `cloth2-production.up.railway.app/api/products?category=${category}&featured=true`
-          : 'cloth2-production.up.railway.app/api/products?featured=true'
+          ? `https://cloth2-production.up.railway.app/api/products?category=${category}&featured=true`
+          : 'https://cloth2-production.up.railway.app/api/products?featured=true'
         const response = await axios.get(url)
         setProducts(response.data.products.filter(product => product.featured))
         setLoading(false)

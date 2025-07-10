@@ -7,7 +7,7 @@ require("dotenv").config()
 const app = express()
 
 // Middleware
-const allowedOrigins = ["https://cloth1-jet.vercel.app", "cloth2-production.up.railway.app","http://localhost:5173","https://cloth1-2.onrender.com","https://cloth2-nine.vercel.app/"]
+const allowedOrigins = ["https://cloth1-jet.vercel.app", "https://cloth2-production.up.railway.app","http://localhost:5173","https://cloth1-2.onrender.com","https://cloth2-nine.vercel.app/"]
 
 app.use(
   cors({

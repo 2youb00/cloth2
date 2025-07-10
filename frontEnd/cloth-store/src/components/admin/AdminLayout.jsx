@@ -7,7 +7,7 @@ export default function AdminLayout() {
 
   const handleLogout = async () => {
     try {
-      await axios.post('cloth2-production.up.railway.app/api/admin/logout', {}, {
+      await axios.post('https://cloth2-production.up.railway.app/api/admin/logout', {}, {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
         }

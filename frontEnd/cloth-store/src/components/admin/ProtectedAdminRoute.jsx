@@ -16,7 +16,7 @@ export default function ProtectedAdminRoute() {
       }
 
       try {
-        await axios.get('cloth2-production.up.railway.app/api/admin/verify', {
+        await axios.get('https://cloth2-production.up.railway.app/api/admin/verify', {
           headers: {
             'Authorization': `Bearer ${token}`,
           },

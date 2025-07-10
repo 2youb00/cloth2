@@ -15,7 +15,7 @@ export default function AdminDashboard() {
 
   const fetchDashboardStats = async () => {
     try {
-      const response = await axios.get('cloth2-production.up.railway.app/api/admin/dashboard-stats', {
+      const response = await axios.get('https://cloth2-production.up.railway.app/api/admin/dashboard-stats', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`
         }

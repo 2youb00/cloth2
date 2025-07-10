@@ -12,7 +12,7 @@ export default function AdminShippedOrders() {
 
   const fetchShippedOrders = async () => {
     try {
-      const response = await axios.get('cloth2-production.up.railway.app/api/orders/all', {
+      const response = await axios.get('https://cloth2-production.up.railway.app/api/orders/all', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`,
         },

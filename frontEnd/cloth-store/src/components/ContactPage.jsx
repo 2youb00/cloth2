@@ -16,7 +16,7 @@ export default function ContactPage() {
   const handleSubmit = async (e) => {
     e.preventDefault()
     try {
-      await axios.post('cloth2-production.up.railway.app/api/contact', formData)
+      await axios.post('https://cloth2-production.up.railway.app/api/contact', formData)
       setStatus('success')
       setFormData({ name: '', email: '', message: '' })
     } catch (error) {

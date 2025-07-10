@@ -25,7 +25,7 @@ export default function SiteSettingsForm() {
 
   useEffect(() => {
     axios
-      .get("cloth2-production.up.railway.app/api/site-settings", {
+      .get("https://cloth2-production.up.railway.app/api/site-settings", {
         headers: { Authorization: `Bearer ${localStorage.getItem("adminToken")}` },
       })
       .then((res) => {
@@ -98,7 +98,7 @@ export default function SiteSettingsForm() {
         formData.append("heroImageMobile", settings.heroImageMobile || "")
       }
 
-      const response = await axios.put("cloth2-production.up.railway.app/api/site-settings", formData, {
+      const response = await axios.put("https://cloth2-production.up.railway.app/api/site-settings", formData, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
           "Content-Type": "multipart/form-data",

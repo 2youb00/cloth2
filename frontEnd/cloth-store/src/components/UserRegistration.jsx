@@ -27,7 +27,7 @@ export default function UserRegistration() {
     }
 
     try {
-      const response = await axios.post('cloth2-production.up.railway.app/api/users/register', formData)
+      const response = await axios.post('https://cloth2-production.up.railway.app/api/users/register', formData)
       console.log(response)
       localStorage.setItem('token', response.data.token)
       navigate('/')
