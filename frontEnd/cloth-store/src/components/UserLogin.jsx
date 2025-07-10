@@ -19,7 +19,7 @@ export default function UserLogin() {
     setError('')
 
     try {
-      const response = await axios.post('http://localhost:5000/api/users/login', formData)
+      const response = await axios.post('cloth2-production.up.railway.app/api/users/login', formData)
       console.log(response)
       localStorage.setItem('token', response.data.token)
       navigate('/')

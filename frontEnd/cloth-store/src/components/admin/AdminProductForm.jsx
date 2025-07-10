@@ -37,13 +37,13 @@ export default function AdminProductForm() {
   const getImageUrl = (imagePath) => {
     if (!imagePath) return "/placeholder.svg"
     if (imagePath.startsWith("http")) return imagePath // Cloudinary URL
-    return `http://localhost:5000${imagePath}` // Local path
+    return `cloth2-production.up.railway.app${imagePath}` // Local path
   }
 
   const fetchProduct = async () => {
     try {
       setIsLoading(true)
-      const response = await axios.get(`http://localhost:5000/api/products/${id}`, {
+      const response = await axios.get(`cloth2-production.up.railway.app/api/products/${id}`, {
         headers: {
           Authorization: `Bearer ${localStorage.getItem("adminToken")}`,
         },
@@ -161,7 +161,7 @@ export default function AdminProductForm() {
         formData.append("images", file)
       })
 
-      const url = id ? `http://localhost:5000/api/products/${id}` : "http://localhost:5000/api/products"
+      const url = id ? `cloth2-production.up.railway.app/api/products/${id}` : "cloth2-production.up.railway.app/api/products"
       const method = id ? "patch" : "post"
       await axios({
         method,

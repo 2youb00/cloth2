@@ -13,7 +13,7 @@ export default function AdminLogin() {
     setError('')
 
     try {
-      const response = await axios.post('http://localhost:5000/api/admin/login', { email, password })
+      const response = await axios.post('cloth2-production.up.railway.app/api/admin/login', { email, password })
       localStorage.setItem('adminToken', response.data.token)
       navigate('/admin/dashboard')
     } catch (error) {

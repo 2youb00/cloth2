@@ -17,7 +17,7 @@ export default function ProductDetails() {
     const fetchProduct = async () => {
       try {
         setLoading(true)
-        const response = await axios.get(`http://localhost:5000/api/products/${id}`)
+        const response = await axios.get(`cloth2-production.up.railway.app/api/products/${id}`)
         setProduct(response.data)
         setLoading(false)
       } catch (err) {
@@ -33,7 +33,7 @@ export default function ProductDetails() {
   const getImageUrl = (imagePath) => {
     if (!imagePath) return "/placeholder.jpg"
     if (imagePath.startsWith("http")) return imagePath // Cloudinary URL
-    return `http://localhost:5000${imagePath}` // Local path
+    return `cloth2-production.up.railway.app${imagePath}` // Local path
   }
 
   const handleAddToCart = () => {

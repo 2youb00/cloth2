@@ -15,7 +15,7 @@ export default function Cart() {
   const getImageUrl = (imagePath) => {
     if (!imagePath) return "/placeholder.jpg"
     if (imagePath.startsWith("http")) return imagePath // Cloudinary URL
-    return `http://localhost:5000${imagePath}` // Local path
+    return `cloth2-production.up.railway.app${imagePath}` // Local path
   }
 
   const updateQuantity = (productId, newQuantity) => {

@@ -15,7 +15,7 @@ export default function AdminCancelledOrders() {
     setIsLoading(true)
     try {
       console.log('Fetching cancelled orders...');
-      const response = await axios.get('http://localhost:5000/api/orders/get/cancelled', {
+      const response = await axios.get('cloth2-production.up.railway.app/api/orders/get/cancelled', {
         headers: {
           'Authorization': `Bearer ${localStorage.getItem('adminToken')}`,
         },

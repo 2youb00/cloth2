@@ -14,7 +14,7 @@ export default function ProductCard({ product }) {
   const getImageUrl = (imagePath) => {
     if (!imagePath) return "/placeholder.jpg"
     if (imagePath.startsWith("http")) return imagePath // Cloudinary URL
-    return `http://localhost:5000${imagePath}` // Local path
+    return `cloth2-production.up.railway.app${imagePath}` // Local path
   }
 
   const mainImage = product.images && product.images.length > 0 ? getImageUrl(product.images[0]) : "/placeholder.jpg"
